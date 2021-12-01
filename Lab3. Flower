@@ -1,0 +1,179 @@
+yvberezovs@mts.ru
+
+import Flower;
+import FlowerMarket;
+
+public class Aster extends Flower {
+    private static int count;
+
+    public Aster() {
+        super.setName("Астра");
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void printSoldFlowerInfo() {
+        System.out.printf("На текущий момент продано астр - %d шт\n\n", getCount());
+    }
+
+    @Override
+    public double getCost() {
+        return FlowerMarket.Flowers.ASTER.getPrice();
+    }
+}
+
+import Flower;
+import FlowerMarket;
+
+public class Carnation extends Flower {
+    private static int count;
+
+    public Carnation() {
+        super.setName("Гвоздика");
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void printSoldFlowerInfo() {
+        System.out.printf("На текущий момент продано гвоздик - %d шт\n\n", getCount());
+    }
+
+    @Override
+    public double getCost() {
+        return FlowerMarket.Flowers.CARNATION.getPrice();
+    }
+}
+
+import Bouquet;
+
+import Locale;
+
+public class Demo {
+    public static void main(String[] args) {
+        Rose[] roses = new Rose[1_000_000];
+        for (int i = 0; i < roses.length; i++) {
+            roses[i] = new Rose();
+        }
+        Bouquet bouquet = new Bouquet(roses);
+        printInfo(bouquet);
+
+        bouquet = new Bouquet(new Tulip(), new Tulip(),
+                new Tulip(), new Aster(), new Aster());
+        printInfo(bouquet);
+
+        bouquet = new Bouquet(new Carnation(), new Tulip(),
+                new Lily(), new Herbera(), new Rose());
+        printInfo(bouquet);
+    }
+
+    private static void printInfo(Bouquet bouquet) {
+        System.out.print(bouquet);
+        System.out.printf(Locale.ROOT, "Стоимость букета: %.1f грн\n\n", bouquet.getBouquetCost());
+    }
+}
+
+import Flower;
+import FlowerMarket;
+
+public class Herbera extends Flower {
+    private static int count;
+
+    public Herbera() {
+        super.setName("Гербера");
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void printSoldFlowerInfo() {
+        System.out.printf("На текущий момент продано гербер - %d шт\n\n", getCount());
+    }
+
+    @Override
+    public double getCost() {
+        return FlowerMarket.Flowers.HERBERA.getPrice();
+    }
+}
+
+import Flower;
+import FlowerMarket;
+
+public class Lily extends Flower {
+    private static int count;
+
+    public Lily() {
+        super.setName("Лилия");
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void printSoldFlowerInfo() {
+        System.out.printf("На текущий момент продано лилий - %d шт\n\n", getCount());
+    }
+
+    @Override
+    public double getCost() {
+        return FlowerMarket.Flowers.LILY.getPrice();
+    }
+}
+
+import Flower;
+import FlowerMarket;
+
+public class Rose extends Flower{
+    private static int count;
+
+    public Rose() {
+        super.setName("Роза");
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void printSoldFlowerInfo() {
+        System.out.printf("На текущий момент продано роз - %d шт\n\n", getCount());
+    }
+
+    @Override
+    public double getCost() {
+        return FlowerMarket.Flowers.ROSE.getPrice();
+    }
+}
+
+import Flower;
+import FlowerMarket;
+
+public class Tulip extends Flower {
+    private static int count;
+
+    public Tulip() {
+        super.setName("Тюльпан");
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void printSoldFlowerInfo() {
+        System.out.printf("На текущий момент продано тюльпанов - %d шт\n\n", getCount());
+    }
+
+    @Override
+    public double getCost() {
+        return FlowerMarket.Flowers.TULIP.getPrice();
+    }
+}
