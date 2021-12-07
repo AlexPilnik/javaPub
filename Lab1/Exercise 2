@@ -3,7 +3,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
+//2.
+        Scanner in = new Scanner(System.in);
+        System.out.print("Ввести целое трехзначное число : ");
+        int a = in.nextInt();
+        int sum =0;
+        int l = a%10;
+        sum= sum+l;
+        a=a/10;
+        l=a%10;
+        sum = sum+l;
+        a=a/10;
+        sum = sum+a;
+        System.out.printf("Сумма цифр трехзначного числа : %d \n", sum);
+        in.close();
 
 
 
