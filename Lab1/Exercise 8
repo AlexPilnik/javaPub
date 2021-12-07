@@ -3,6 +3,33 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+//7.
+        double moscow = 4.15,rostov = 1.98, krasnodar=2.69,kirov = 5,sum,tax;
+        double minutes = 10;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Ввести код города: ");
+        int city_code = in.nextInt();
+
+        switch(city_code)
+        {
+            case (905):
+                tax = moscow;
+                break;
+            case (194):
+                tax = rostov;
+                break;
+            case (491):
+                tax = krasnodar;
+                break;
+            case (800):
+                tax = kirov;
+                break;
+            default:
+                return;
+
+        }
+        sum = tax * minutes;
+        System.out.println(sum);
 
 
 
