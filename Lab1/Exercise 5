@@ -3,8 +3,19 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
-
+//5.
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число 1: ");
+        int a = in.nextInt();
+        System.out.println("Введите число 2: ");
+        int b = in.nextInt();
+        System.out.println("Введите число 3: ");
+        int c = in.nextInt();
+        int min=a;
+        if (min > b) min = b;
+        if (min > c) min = c;
+        System.out.println(min);
+        in.close();
 
 
    }
