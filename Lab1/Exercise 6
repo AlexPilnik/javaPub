@@ -3,6 +3,21 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+ //6.
+      
+        Scanner in = new Scanner(System.in);
+        System.out.print("Ввести целое число:");
+        int a = in.nextInt();
+        if (a==0) System.out.println("Нулевое");
+        else{
+            if (a>0) System.out.println("Положительное ");
+            else System.out.println("Отрицательное ");
+            if ((a%2)== 0) System.out.println("Чётное ");
+            else System.out.println("Нечётное ");
+        }
+
+        System.out.println(a);
+        in.close();
 
 
 
